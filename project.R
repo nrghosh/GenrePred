@@ -13,6 +13,7 @@ library(caret)
 library(e1071)
 ##
 #this next line gets you authenticated#
+# Hardcoded
 
 keys <- spotifyOAuth("LoveDaSystem","81cc700dd4b14417bffd6f4fb52ac8c0","a34ddd6bd44a464f92f6ada8007ad2ac")
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -87,7 +88,6 @@ features$genres<-playlist$genre
 features[,15]<-NULL
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#HOW DO WE GET THIS TO WORK 
 #SVM
 set.seed(1234)
 index <- sample(nrow(features), 0.75*nrow(features))
@@ -108,8 +108,6 @@ confusionMatrix(prediction,test$genres)
 #Accuracy is .6048. Most error comes from rock category as well as indie
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #randomforest
-#WE GOT A METHOD TO WORK
-
 ########Part 2
 
 train$id<-as.factor(train$id)
@@ -121,8 +119,9 @@ fit.forest <- randomForest(genres ~ .-id, data=train,
                            importance=TRUE)
 pred<-predict(fit.forest,test)
 confusionMatrix(pred,test$genres)
-#ok so i got 58% accuracy. Im going to remove alternative and try again
-#accuracy is 70% without alternative music. That genre is kinda just a mix of 'other' which would explain this misclassifications
+#58% accuracy. remove alternative and try again
+#accuracy is 70% without alternative music. 
+# "Alternative" is not well defined which would explain this misclassification
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #xgbBoost Trees
