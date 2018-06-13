@@ -1,13 +1,4 @@
----
-title: 'QAC 385 Final Report: Genre Prediction in Spotify'
-author: "Dennis Kraus, Kris Zhang, and Nikhil Ghosh"
-date: "12/12/2017"
-output: 
-  html_document:
-    toc: true
-    toc_float: true
-    code_folding: hide
----
+
 
 ```{r setup, include=FALSE, results='hide',message=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
