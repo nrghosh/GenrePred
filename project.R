@@ -85,7 +85,6 @@ features$genres<-playlist$genre
 
 features[,15]<-NULL #run this line twice
 
-
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #SVM
 set.seed(1234)
