@@ -105,8 +105,10 @@ table(test$genres, prediction)
 confusionMatrix(prediction,test$genres)
 #Accuracy is .6048. Most error comes from rock category as well as indie
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#randomforest
+
+
 ########Part 2
+#randomforest
 
 train$id<-as.factor(train$id)
 test$id<-as.factor(test$id)
