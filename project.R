@@ -173,7 +173,3 @@ model2
 predict<-predict(model2,test)
 confusionMatrix(predict,test$genres)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
