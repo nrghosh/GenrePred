@@ -83,8 +83,8 @@ colnames(features)<-c('id','danceability','energy','key','loudness','mode','spee
 
 features$genres<-playlist$genre
 
-#run next line twice
-features[,15]<-NULL
+features[,15]<-NULL #run this line twice
+
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #SVM
@@ -158,11 +158,6 @@ test$country=ifelse(test$genres=="Country", 1, 0)
 test$folk=ifelse(test$genres=="Folk", 1, 0)
 test$jazz=ifelse(test$genres=="Jazz", 1, 0)
 test$dance=ifelse(test$genres=="Dance", 1, 0)
-
-
-
-
-
 
 tc <- trainControl(method = "cv",
                    number = 10)
