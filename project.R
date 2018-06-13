@@ -12,8 +12,7 @@ library(randomForest)
 library(caret)
 library(e1071)
 ##
-#this next line gets you authenticated#
-# Hardcoded
+# Authentication (hardcoded)
 
 keys <- spotifyOAuth("LoveDaSystem","81cc700dd4b14417bffd6f4fb52ac8c0","a34ddd6bd44a464f92f6ada8007ad2ac")
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
