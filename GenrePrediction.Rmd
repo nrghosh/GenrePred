@@ -1,9 +1,4 @@
 
-
-```{r setup, include=FALSE, results='hide',message=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # Problem Statement
 What even are genres? Genres are a special method that we use to classify music. While some types of classifications are extremely subjective, music has evolved to a point where we can draw lines, albeit blurry ones, in the sand, and make statements about two songs, asserting them to different categories. However, how can classifying every song by hand be practical? Manually sorting tracks into categories is both labor-intensive and time consuming, while sorting tracks into their respective genres can be a subjective exercise, vulnerable to personal biases and skewed perspectives. In our final project, we attempt to train a few types of models to classify songs to certain genres. 
 
