@@ -106,7 +106,6 @@ confusionMatrix(prediction,test$genres)
 #Accuracy is .6048. Most error comes from rock category as well as indie
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 ########Part 2
 #randomforest
 
@@ -163,6 +162,7 @@ test$dance=ifelse(test$genres=="Dance", 1, 0)
 tc <- trainControl(method = "cv",
                    number = 10)
 
+# rand seed
 set.seed(1234)
 model2 <- train(rock+indie+country+hiphop+country+folk+jazz+dance ~ .-id , 
                 data = train_matrix,
