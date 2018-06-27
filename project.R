@@ -17,7 +17,7 @@ library(e1071)
 keys <- spotifyOAuth("LoveDaSystem","81cc700dd4b14417bffd6f4fb52ac8c0","a34ddd6bd44a464f92f6ada8007ad2ac")
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#getPlaylist gets all playlists for a user
+#g etPlaylist gets all playlists for a user
 df<-getPlaylist("dekraus-us",offset=0,keys)
 
 #The 26 playlist is the biggest
@@ -83,7 +83,7 @@ colnames(features)<-c('id','danceability','energy','key','loudness','mode','spee
 
 features$genres<-playlist$genre
 
-features[,15]<-NULL #run this line twice
+features[,15]<-NULL #run this part twice
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #SVM
@@ -162,7 +162,7 @@ test$dance=ifelse(test$genres=="Dance", 1, 0)
 tc <- trainControl(method = "cv",
                    number = 10)
 
-# rand seed
+# random seed
 set.seed(1234)
 model2 <- train(rock+indie+country+hiphop+country+folk+jazz+dance ~ .-id , 
                 data = train_matrix,
